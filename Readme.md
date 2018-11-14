@@ -1,6 +1,6 @@
 # Личный проект «Техномарт»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/23/user/887139).
+* Студент: [Антон Польшаков](https://up.htmlacademy.ru/htmlcss/23/user/887139).
 * Наставник:  [Юрий Зайцев](https://htmlacademy.ru/profile/yuryzaytsev).
 
 ---
