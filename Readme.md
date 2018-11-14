@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/23/user/887139).
-* Наставник: `Неизвестно`.
+* Студент: [Антон Польшаков](https://up.htmlacademy.ru/htmlcss/23/user/887139).
+* Наставник:  [Юрий Зайцев](https://htmlacademy.ru/profile/yuryzaytsev).
 
 ---
 
@@ -12,7 +12,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`
 
 ### Памятка
 
-#### 1. Зарегистрируйтесь на Гитхабе
+#### 1. Зарегистрируйтесь на Гитхаб
 
 Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
 
