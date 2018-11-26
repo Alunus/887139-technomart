@@ -7,10 +7,10 @@
   </head>
 
   <body>
-    <header class=page-header>
+    <header class="page-header">
       <a class="logo" href="">ТЕХНОМАРТ</a>
       <img src="img/icon-search.svg" alt="Поиск">
-      <p>Поиск</p>
+      <input type="search" name="search" placeholder="Поиск">
       <img src="img/icon-bookmark.svg" alt="Закладки">
       <a href="">Закладки</a>
       <img src="img/cart-icon.svg" alt="Корзина">
@@ -20,14 +20,16 @@
       <img src="img/icon-phone.svg" alt="Телефон">
       <p>+7 (812) 555-05-55</p>
       <p> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <button>
       <img src="img/icon-login.svg" alt="Войти">
       <a class="btn" href="">Войти</a>
+    </button>
       <a class="btn" href="">Регистрация</a>
       <nav>
         <ul class="main-nav">
           <li><a href="">Главная</a></li>
           <li><a href="">Компания</a></li>
-          <li><a href="">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
           <li><a href="">Новости</a></li>
           <li><a href="">Спецпредложения</a></li>
           <li><a href="">Доставка</a></li>
@@ -138,7 +140,7 @@
             <a href="https://facebook.com">Facebook</a>
           </li>
           <li>
-            <img src="insta-icon.svg" alt="Instagram">
+            <img src="img/insta-icon.svg" alt="Instagram">
             <a href="https://www.instagram.com/">Инстаграм</a></li>
         </ul>
         <div>
@@ -149,6 +151,23 @@
         </div>
       </div>
     </footer>
+    <form class="letter" method="post"
+          action="">
+      <p>
+        <label for="user_name">Ваше имя</label>
+        <input type="text" name="user_name" id="user_name">
+      </p>
+      <p>
+        <label for="user_email">Ваш e-mail</label>
+        <input type="text" name="user_email" id="user_email">
+      </p>
+    <label for="letter">Текст письма</label> <br>
+      <textarea name="letter" id="letter">
+        В свободной форме
+      </textarea>
+    </p>
+    <button type="submit">Отправить</button>
+    </form>
   </body>
 
 </html>
