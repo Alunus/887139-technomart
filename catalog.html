@@ -45,9 +45,10 @@
       <div class="catalog-filter">
         <form method="post" action="">
           <div class="filter-item">
-            Фильтр
-            Цена
-            0-30000
+            <p>Фильтр</p>
+            <label for="price">Цена</label>
+            <input type="range" min="0" max="30000" step="1" value="15000" name="price" id="price">
+            <span>0</span><span>-</span><span>30000</span>
           </div>
           <div class="filter-item">
             <label>Производители:</label>
@@ -190,7 +191,7 @@
             <a href="">
               <h3>Перфоратор BOCSH BFG 2000</h3>
               <p></p>
-              <p>12500 Р.<p>
+              <p>12500 Р.</p>
             </a>
           </li>
         </ul>
@@ -239,7 +240,7 @@
         </li>
       </ul>
       <div>
-        <b>Обратная связь:</b></br>
+        <b>Обратная связь:</b><br>
         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         <b>Разработано-</b><br>
         <a href="https://html-academy.ru/intensive/htmlcss">HTML-Academy.ru</a>
