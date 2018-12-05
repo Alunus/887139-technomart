@@ -11,14 +11,16 @@
 
 <body>
   <header class="page-header">
-    <div class=user-menu>
-      <a class="logo" href="">Техномарт</a>
-      <form method="POST" action="http://echo.htmlacademy.ru">
-      <input type="search" name="search" placeholder="Поиск" aria-label="Search">
-    </form>
-      <a href="">Закладки</a>
-      <a href="">Корзина</a>
+    <div class="user-menu-bg">
+    <div class="user-menu">
+      <a class="logo" href=""><span>Техномарт</span></a>
+      <form class="search" method="POST" action="http://echo.htmlacademy.ru">
+        <input type="search" name="search" placeholder="Поиск" aria-label="Search">
+      </form>
+      <a class="bookmark" href="">Закладки</a>
+      <a class="cart" href="">Корзина</a>
       <a class="btn" href="">Оформить заказ</a>
+    </div>
     </div>
     <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
     <div class="contacts">
@@ -254,27 +256,27 @@
     </div>
   </footer>
   <section>
-  <form class="letter" method="post" action="http://echo.htmlacademy.ru">
-    <p>
-      <label for="user_name">Ваше имя</label>
-      <input type="text" name="user_name" id="user_name">
-    </p>
-    <p>
-      <label for="user_email">Ваш e-mail</label>
-      <input type="text" name="user_email" id="user_email">
-    </p>
-    <p>
-      <label for="letter">Текст письма</label> 
-      <textarea name="letter" id="letter" placeholder="В свободной форме"></textarea>
-    </p>
-    <button type="submit" class="btn">Отправить</button>
-    <button type="button" class="btn">Закрыть</button>
-  </form>
-</section>
-<section class=interactive-map>
-  <h2 class="visually-hidden">Интерактивная карта</h2>
-  <img src="img/popup-map.jpg" height="446" width="940" alt="Всплывающая карта">
-</section>
+    <form class="letter" method="post" action="http://echo.htmlacademy.ru">
+      <p>
+        <label for="user_name">Ваше имя</label>
+        <input type="text" name="user_name" id="user_name">
+      </p>
+      <p>
+        <label for="user_email">Ваш e-mail</label>
+        <input type="text" name="user_email" id="user_email">
+      </p>
+      <p>
+        <label for="letter">Текст письма</label>
+        <textarea name="letter" id="letter" placeholder="В свободной форме"></textarea>
+      </p>
+      <button type="submit" class="btn">Отправить</button>
+      <button type="button" class="btn">Закрыть</button>
+    </form>
+  </section>
+  <section class=interactive-map>
+    <h2 class="visually-hidden">Интерактивная карта</h2>
+    <img src="img/popup-map.jpg" height="446" width="940" alt="Всплывающая карта">
+  </section>
 </body>
 
 </html>

@@ -29,7 +29,7 @@ body {
   .page-header {
       background-color: #f4f7f9;
   }
-  .user-menu {
+  .user-menu-bg {
       background-color: #293449;
   }
   .user-menu a {
@@ -244,4 +244,43 @@ text-transform: uppercase;
     font-size: 13px;
     line-height: 24px;
     color:#000000;
+}
+/*Разметка*/
+body{
+    width:1200px;
+    margin: auto;
+}
+.page-header{
+    min-width:1200px;
+    height: 320px;
+}
+.user-menu{
+    display: flex;
+    width:940px;
+    height:42px;
+    margin:auto;
+}
+.user-menu .logo {
+    display:flex;
+    width:220px;
+    height: 42px;
+    margin-right:20px;
+}
+.logo span {
+    padding:0;
+    margin:auto;
+    text-align: center;
+}
+.user-menu .search {
+    margin-top:auto;
+    margin-bottom: auto;
+    padding:0px;
+    text-align: center;
+}
+.user-menu .search::before {
+    content: "";
+    width: 17px;
+    height:17px;
+    background-image: url("../img/icon-search.svg");
+    fill:gray;
 }
