@@ -4,24 +4,33 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт-каталог</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="page-header">
-    <a class="logo" href="index.html">Техномарт</a>
-    <form method="post" action="">
-      <input type="search" name="search" placeholder="Поиск" aria-label="search">
-    </form>
-    <a href="#">Закладки</a>
-    <a href="#">Корзина</a>
-    <a class="btn" href="">Оформить заказ</a>
+    <div class="user-menu">
+      <a class="logo" href="index.html">Техномарт</a>
+      <form method="post" action="http://echo.htmlacademy.ru">
+        <input type="search" name="search" placeholder="Поиск" aria-label="Search">
+      </form>
+      <a href="#">Закладки</a>
+      <a href="#">Корзина</a>
+      <a class="btn" href="">Оформить заказ</a>
+    </div>
     <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-    <p>+7 (812) 555-05-55</p>
-    <p> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-    <a href="#">Равшан Джумшутович</a>
-    <a href="#">Выйти</a>
+    <div class="contacts">
+      <p>+7 (812) 555-05-55</p>
+      <p> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+    </div>
+    <div class="user-office">
+    <a class="user-name" href="#">Равшан Джумшутович</a>
+    <a class="visually-hidden" href="#">Выйти</a>
     <a href="#">Мои заказы</a>
     <a href="#">Личный кабинет</a>
+  </div>
     <nav>
       <ul class="main-nav">
         <li><a href="index.html">Главная</a></li>
@@ -36,16 +45,16 @@
   </header>
   <main>
     <ul class="breadcrumbs">
-      <li><a href="index.html">Домашняя страница</a></li>
+      <li><a href="index.html"><span class="visually-hidden">>Домашняя страница</span></a></li>
       <li><a href="catalog.html">Каталог</a></li>
       <li><a href="#">Инструмент</a></li>
       <li><a>Перфораторы</a></li>
     </ul>
-      <header>
-        <h2>Перфораторы</h2>
-      </header>
+    <header class="catalog-header">
+      <h2>Перфораторы</h2>
+    </header>
     <section class="catalog">
-      <form class="catalog-filter" method="post" action="">
+      <form class="catalog-filter" method="post" action="http://echo.htmlacademy.ru">
         <fieldset class="filter-item">
           <legend>Фильтр</legend>
           <label for="price">Цена</label>
@@ -80,10 +89,10 @@
         </ul>
         <ul>
           <li class="sort-up">
-            По возрастающей
+            <a href="#"><span class="visually-hidden">По возрастающей</span></a>
           </li>
           <li class="sort-down">
-            По убывающей
+            <a href="#"><span class="visually-hidden">По убывающей</span></a>
           </li>
         </ul>
       </div>
@@ -94,8 +103,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg3000.jpg" height=176 width=220 alt="BFG3000">
-            <a href="#">
+            <img src="img/bfg3000.jpg" height="176" width="220" alt="BFG3000">
+            <a class="name-price" href="#">
               <h3>Перфоратор BOCSH BFG 3000</h3>
               <p>22500 Р.</p>
               <p>15500 Р.</p>
@@ -106,8 +115,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg6000.jpg" height=176 width=220 alt="BFG6000">
-            <a href="#">
+            <img src="img/bfg6000.jpg" height="176" width="220" alt="BFG6000">
+            <a class="name-price" href="#">
               <h3>Перфоратор BOCSH BFG 6000</h3>
               <p>30500 Р.</p>
               <p>25500 Р.</p>
@@ -118,8 +127,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg2000.jpg" height=176 width=220 alt="BFG2000">
-            <a href="#">
+            <img src="img/bfg2000.jpg" height="176" width="220" alt="BFG2000">
+            <a class="name-price" href="#">
               <h3>Перфоратор BOCSH BFG 2000</h3>
               <p>12500 Р.</p>
             </a>
@@ -129,8 +138,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg3000.jpg" height=176 width=220 alt="BFG3000">
-            <a href="#">
+            <img src="img/bfg3000.jpg" height="176" width="220" alt="BFG3000">
+            <a class="name-price" href="#">
               <h3>Перфоратор BOCSH BFG 3000</h3>
               <p>22500 Р.</p>
               <p>15500Р.</p>
@@ -141,8 +150,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg6000.jpg" height=176 width=220 alt="BFG6000">
-            <a href="#">
+            <img src="img/bfg6000.jpg" height="176" width="220" alt="BFG6000">
+            <a class="name-price" href="#">
               <h3>Перфоратор BOCSH BFG 6000</h3>
               <p>30500 Р.</p>
               <p>25500 Р.</p>
@@ -153,8 +162,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg2000.jpg" height=176 width=220 alt="BFG2000">
-            <a href="#">
+            <img src="img/bfg2000.jpg" height="176" width="220" alt="BFG2000">
+            <a class="name-price" href="#">
               <h3> Перфоратор BOCSH BFG 2000</h3>
               <p>12500 Р.</p>
             </a>
@@ -164,8 +173,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg3000.jpg" height=176 width=220 alt="BFG3000">
-            <a href="#">
+            <img src="img/bfg3000.jpg" height="176" width="220" alt="BFG3000">
+            <a class="name-price" href="#">
               <h3>Перфоратор BOCSH BFG 3000</h3>
               <p>22500 Р.</p>
               <p>15500Р.</p>
@@ -176,8 +185,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg6000.jpg" height=176 width=220 alt="BFG6000">
-            <a href="#">
+            <img src="img/bfg6000.jpg" height="176" width="220" alt="BFG6000">
+            <a class="name-price" href="#">
               <h3>Перфоратор BOCSH BFG 6000</h3>
               <p>30500 Р.</p>
               <p>25500 Р.</p>
@@ -188,8 +197,8 @@
               <a class="btn">Купить</a>
               <a class="btn">В закладки</a>
             </div>
-            <img src="img/bfg2000.jpg" height=176 width=220 alt="BFG2000">
-            <a href="#">
+            <img src="img/bfg2000.jpg" height="176" width="220" alt="BFG2000">
+            <a class="name-price" href="#">
               <h3>Перфоратор BOCSH BFG 2000</h3>
               <p>12500 Р.</p>
             </a>
@@ -249,10 +258,12 @@
     </div>
   </footer>
   <div class="popup">
-    <input class="close visually-hidden" type="button" name="close" value="Закрыть">
+    <button type="button" name="close">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
     <p>Товар добавлен в корзину!</p>
-    <input class="btn" type="button" name="order" value="Оформить заказ">
-    <input class="btn" type="button" name="close" value="Продолжить покупки">
+    <a class="btn">Оформить заказ</a>
+    <a class="btn" href="catalog.html">Продолжить покупки</a>
   </div>
 </body>
 
