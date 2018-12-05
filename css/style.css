@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: normal;
+    color: #000000;
+  }
+  a {
+    text-decoration: none;
+  }
+    .btn {
+    font-size: 17px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color:#ffffff;
+    background-color: #ee3643;
+    border:none;
+    }
+    .visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    }
+  .page-header {
+      background-color: #f4f7f9;
+  }
+  .user-menu {
+      background-color: #293449;
+  }
+  .user-menu a {
+    line-height: 18px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .logo {
+    font-size:24px;
+    line-height: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color:#ee3643;
+  }
+  .user-menu .btn {
+    background-color:#63a63e;
+  }
+  h1 {
+    font-style:italic;
+    font-size:16px;
+    line-height:23px;
+    color:#ee3643;
+  }
+  .contacts p:first-child{
+      font-size: 21px;
+      line-height:21px;
+      color:#ee3643;
+      border: 1px solid #ffffff;
+  }
+  .contacts p:last-child{
+    font-size: 14px;
+    line-height:24px;
+    color:#32425c;
+  }
+  .login, .reg {
+      font-size:21px;
+      line-height: 21px;
+      text-transform: none;
+      color: #000000;
+      background-color:#ffffff;
+  }
+  .main-nav {
+    font-size: 17px;
+    line-height: 17px;
+    background-color: #32425c;
+    list-style:none;
+  }
+  .main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .promo ul {
+      list-style: none;
+  }
+  .promo-item p{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  }
+.promo-item .btn {
+    background-color: rgba(0,0, 0, 0.1)
+}
+.promo-item:nth-child(1)  {
+      background-color:#ffbf47;
+}
+.promo-item:nth-child(2)  {
+    background-color:#3bbce3;
+}
+.promo-item:nth-child(3)  {
+    background-color:#dc91d8;
+}
+.promo-item:nth-child(4)  {
+    background-color:#8ed78f;
+}
+.promo-item:nth-child(5)  {
+    background-color:#ffc047;
+}
+.popular-header, .popular-brands {
+    background-color:#f9f5f0;
+}
+.popular-header h2 {
+font-size:30px;
+line-height: 30px;
+text-transform:uppercase;
+}
+.popular-item, .catalog-item {
+    font-family: PT Sans, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    list-style: none;
+    border: 1px solid #eaeaea;
+}
+.popular-item .name-price, .catalog-item .name-price {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.popular-item p, .catalog-item p{
+    text-decoration: line-through;
+    color: #aaaaaa;
+}
+.popular-item p:last-child, .catalog-item p:last-child {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ee3643;
+}
+.brands ul {
+    list-style:none;
+}
+.brands li {
+    border: 1px solid #eaeaea;
+}
+.service {
+   background-color: #f4f8f9;
+}
+.service ul {
+    list-style: none;
+}
+.service button {
+    background-color: #32425c;
+    border:none;
+}
+.description p {
+font-size: 36px;
+line-height: 36px;
+color:#32425c;
+text-transform: uppercase;
+}
+.description p:nth-child(2){
+    font-family: PT Sans, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    text-transform: none;
+    color: #000000;
+}
+.company-info h2, .company-contacts h2 {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.company-info p, .company-contacts p {
+    font-family: PT Sans, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+.company-info  ul{
+    list-style:none;
+}
+.company-info li {
+    font-size:18px;
+    line-height: 20px;
+}
+.page-footer {
+    background-color:#32425c;
+    color:#ffffff;
+}
+.footer-nav, .footer-promo, .social {
+    list-style: none;
+}
+.footer-nav a, .footer-promo a, .social a, .page-footer div p{
+    font-size:18px;
+    line-height: 24px;
+    color:#ffffff;
+    text-decoration: none;
+}
+.footer-promo a {
+    color:#ffd180;
+}
+.page-footer div .copyright, .feedback b   {
+    font-size:16px;
+    line-height: 18px;
+}
+.feedback b{
+    font-weight:normal;
+}
+.feedback a {
+    color:#ffd180
+}
+
+/*для каталога*/
+.user-office a {
+    font-size: 16px;
+    line-height: 18px;
+    color:#32425c;
+    text-decoration: underline;
+}
+.user-office .user-name {
+    font-size: 21px;
+    line-height: 21px;
+    color:#000000;
+    text-decoration: none;
+}
+.breadcrumbs {
+    list-style: none;
+}
+.breadcrumbs a {
+    font-family: PT Sans, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color:#000000;
+}
+.catalog-header, .about{
+   background-color:#f2f6f8;
+}
+.catalog-header h2, .about h2{
+    font-size: 30px;
+    line-height: 30px;
+    color:#32425c;
+    text-transform: uppercase;
+}
+.about p {
+    font-size: 13px;
+    line-height: 24px;
+    color:#000000;
+}
