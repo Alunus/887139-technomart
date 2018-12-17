@@ -27,16 +27,16 @@
       Интернет-магазин строительных материалов <br> и инструментов для ремонта
     </h1>
     <div class="contacts">
-      <p>+7 (812) 555-05-55</p>
-      <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-    </div>
+          <p class="phone-number">+7 (812) 555-05-55</p>
+          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
     <div class="user-office">
       <a class="user-name" href="#">Равшан Джумшутович</a>
       <a class="visually-hidden" href="#">Выйти</a>
-      <div class="order-office">
-      <a class="my-order" href="#">Мои заказы</a>
-      <a class="my-office" href="#">Личный кабинет</a>
-    </div>
+      <ul class="order-office">
+      <li><a class="my-order" href="#">Мои заказы</a></li>
+      <li><a class="my-office" href="#">Личный кабинет</a></li>
+    </ul>
     </div>
   </div>
     <nav>
@@ -54,7 +54,7 @@
   <main>
     <ul class="breadcrumbs">
       <li>
-        <a href="index.html"><span class="visually-hidden">>Домашняя страница</span></a>
+        <a class="home" href="index.html" aria-label="На главную"></a>
       </li>
       <li><a href="catalog.html">Каталог</a></li>
       <li><a href="#">Инструмент</a></li>
@@ -79,19 +79,19 @@
           <legend>Производители:</legend>
           <ul class="filter-brands">
             <li>
-              <input type="checkbox" name="bosch" id="bosch" /><label for="bosch">BOSCH</label>
+              <input class="checkbox" type="checkbox" name="bosch" id="bosch" /><label for="bosch">BOSCH</label>
             </li>
             <li>
-              <input type="checkbox" name="interscol" id="interscol" /><label for="interscol">Интерскол</label>
+              <input class="checkbox" type="checkbox" name="interscol" id="interscol" /><label for="interscol">Интерскол</label>
             </li>
             <li>
-              <input type="checkbox" name="makita" id="makita" /><label for="makita">Makita</label>
+              <input class="checkbox" type="checkbox" name="makita" id="makita" /><label for="makita">Makita</label>
             </li>
             <li>
-              <input type="checkbox" name="dewalt" id="dewalt" /><label for="dewalt">DeWALT</label>
+              <input class="checkbox" type="checkbox" name="dewalt" id="dewalt" /><label for="dewalt">DeWALT</label>
             </li>
             <li>
-              <input type="checkbox" name="hitachi" id="hitachi" /><label for="hitachi">HITACHI</label>
+              <input class="checkbox" type="checkbox" name="hitachi" id="hitachi" /><label for="hitachi">HITACHI</label>
             </li>
           </ul>
         </fieldset>
@@ -99,10 +99,10 @@
           <legend>Питание:</legend>
           <ul class="charge-type">
             <li>
-              <input type="radio" name="power-type" id="recharg" /><label for="recharg">Аккумуляторные</label>
+              <input class="radio" type="radio" name="power-type" id="recharg" /><label for="recharg">Аккумуляторные</label>
             </li>
             <li>
-              <input type="radio" name="power-type" id="circuit" /><label for="circuit">Сетевые</label>
+              <input class="radio" type="radio" name="power-type" id="circuit" /><label for="circuit">Сетевые</label>
             </li>
           </ul>
         </fieldset>
@@ -149,7 +149,7 @@
               <p>25500 Р.</p>
             </a>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item new">
             <div class="hidden-buy">
               <a class="btn">Купить</a> <a class="btn">В закладки</a>
             </div>
@@ -170,7 +170,7 @@
               <p>15500Р.</p>
             </a>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item new">
             <div class="hidden-buy">
               <a class="btn">Купить</a> <a class="btn">В закладки</a>
             </div>
@@ -191,7 +191,7 @@
               <p>12500 Р.</p>
             </a>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item new">
             <div class="hidden-buy">
               <a class="btn">Купить</a> <a class="btn">В закладки</a>
             </div>
@@ -224,17 +224,14 @@
             </a>
           </li>
         </ul>
-      </section>
-    </div>
-      <div class="pages visually-hidden">
-        <ul>
+        <ul class="pages">
           <li class="page"><a href="#">1</a></li>
           <li class="page"><a href="#">2</a></li>
           <li class="page"><a href="#">3</a></li>
           <li class="page"><a href="#">Следующая</a></li>
         </ul>
-      </div>
-    </section>
+        </section>
+        </section>
     <section class="about">
       <div>
       <h2>Пара слов о перфораторах</h2>
