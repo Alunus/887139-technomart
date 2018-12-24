@@ -13,9 +13,10 @@
   <header class="page-header">
     <div class="user-menu-bg">
       <div class="user-menu">
-        <a class="logo" href=""><span>Техномарт</span></a>
+        <a class="logo" href="index.html"><span>Техномарт</span></a>
         <form class="search" method="POST" action="http://echo.htmlacademy.ru">
-          <input type="search" name="search" placeholder="Поиск" aria-label="Search" />
+          <input class="search-input" type="search" name="search" id="search" placeholder="Поиск" aria-label="Search">
+          <label for="search"></label>
         </form>
         <a class="bookmark" href="">Закладки</a>
         <a class="cart" href="">Корзина</a>
@@ -99,10 +100,10 @@
           <legend>Питание:</legend>
           <ul class="charge-type">
             <li>
-              <input class="radio" type="radio" name="power-type" id="recharg" /><label for="recharg">Аккумуляторные</label>
+              <input class="radio" type="radio" name="power-type" id="recharg" value="recharg"/><label for="recharg">Аккумуляторные</label>
             </li>
             <li>
-              <input class="radio" type="radio" name="power-type" id="circuit" /><label for="circuit">Сетевые</label>
+              <input class="radio" type="radio" name="power-type" id="circuit" value="circuit" /><label for="circuit">Сетевые</label>
             </li>
           </ul>
         </fieldset>
