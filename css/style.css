@@ -2042,13 +2042,19 @@ opacity: 1;
 }
 
 .catalog-popup {
-    display: flex;
+    display: none;
     flex-direction: column;
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 329px;
     width: 620px;
     margin: auto;
-    margin-top: 10px;
     box-shadow: 0 10px 40px 1px #a9aeb6;
     border-top: 5px solid #ee3643;
+    background-color:#fff;
 }
 
 .catalog-popup p {
@@ -2123,4 +2129,7 @@ opacity: 1;
 }
 .bg {
     background-color: #fff;
+}
+.log-reg {
+    margin-left:auto;
 }

@@ -32,8 +32,18 @@
         <p class="phone-number">+7 (812) 555-05-55</p>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
-      <a class="btn login" href=""><span>Войти</span></a>
-      <a class="btn reg" href=""><span>Регистрация</span></a>
+      <div class="log-reg">
+        <a class="btn login" href=""><span>Войти</span></a>
+        <a class="btn reg" href=""><span>Регистрация</span></a>
+      </div>
+      <div class="user-office hidden">
+        <a class="user-name" href="#">Равшан Джумшутович</a>
+        <a class="logout" href="#" aria-label="Выйти"></a>
+        <ul class="order-office">
+          <li><a class="my-order" href="#">Мои заказы</a></li>
+          <li><a class="my-office" href="#">Личный кабинет</a></li>
+        </ul>
+      </div>
     </div>
     <nav>
       <ul class="main-nav">
@@ -65,22 +75,22 @@
         </li>
       </ul>
       <div class="second-line">
-        <div class="slider-container">
-          <div class="slider">
+        <ul class="slider-container">
+          <li class="slider">
             <h3 class="slider-head">Дрели</h3>
             <p>Соседям на радость!</p>
             <a class="btn" href="catalog.html">Открыть каталог</a>
-          </div>
-          <div class="slider hidden slider-check">
+          </li>
+          <li class="slider">
             <h3 class="slider-head">Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
             <a class="btn" href="catalog.html">Открыть каталог</a>
-          </div>
+          </li>
           <ul class="arrows">
             <li><a class="slider-arrows" href="#"></a></li>
             <li><a href="#"></a></li>
           </ul>
-        </div>
+        </ul>
         <ul class="second-list">
           <li class="promo-item">
             <p>Скидки 50%</p>
@@ -435,21 +445,34 @@
       credit_des.classList.remove("hidden");
     });
 
-    var arrow = document.querySelector("slider-arrows");
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide, 2000);
 
-    var slide = document.querySelector("slider-check")
+    function nextSlide() {
+      slides[currentSlide].className = 'slide';
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].className = 'slide showing';
+    }
 
-    arrow.addEventListener("click", function (evt) {
-evt.preventDefault();
-if  (slide.classList.contains("hidden")) {
-    slide.classList.remove("hidden");
-    slide.classList.add("check");
-        }
- if (slide.classList.contains("check")) {
-    slide.classList.add("hidden");
-    slide.classList.remove("check");
-        }
-});
+    var login = document.querySelector(".login");
+
+    var user_login = document.querySelector(".log-reg");
+
+    var logout = document.querySelector(".logout");
+
+    var user_logout = document.querySelector(".user-office");
+
+    login.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      user_login.classList.add("hidden");
+      user_logout.classList.remove("hidden");
+    });
+    logout.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      user_login.classList.remove("hidden");
+      user_logout.classList.add("hidden");
+    });
 
   </script>
 </body>
