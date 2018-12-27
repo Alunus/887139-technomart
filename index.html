@@ -81,14 +81,14 @@
             <p>Соседям на радость!</p>
             <a class="btn" href="catalog.html">Открыть каталог</a>
           </li>
-          <li class="slider">
+          <li class="slider check hidden">
             <h3 class="slider-head">Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
             <a class="btn" href="catalog.html">Открыть каталог</a>
           </li>
           <ul class="arrows">
             <li><a class="slider-arrows" href="#"></a></li>
-            <li><a href="#"></a></li>
+            <li><a class="slider-arrows" href="#"></a></li>
           </ul>
         </ul>
         <ul class="second-list">
@@ -445,16 +445,6 @@
       credit_des.classList.remove("hidden");
     });
 
-    var slides = document.querySelectorAll('#slides .slide');
-    var currentSlide = 0;
-    var slideInterval = setInterval(nextSlide, 2000);
-
-    function nextSlide() {
-      slides[currentSlide].className = 'slide';
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].className = 'slide showing';
-    }
-
     var login = document.querySelector(".login");
 
     var user_login = document.querySelector(".log-reg");
@@ -474,6 +464,19 @@
       user_logout.classList.add("hidden");
     });
 
+    var arrow = document.querySelectorAll(".slider-arrows");
+
+    var slider = document.querySelector(".check");
+
+arrow.addEventListener("click", function (evt) {
+  evt.preventDefault();
+if (slider.classList.contains("hidden")) {
+slider.classList.remove("hidden")}
+ else { 
+  slider.classList.add("hidden");
+}
+}
+);
   </script>
 </body>
 

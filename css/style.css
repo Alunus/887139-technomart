@@ -1261,11 +1261,12 @@ nav .main-nav {
 
 .popular .popular-item {
     width: 220px;
+    box-sizing: border-box;
     margin-bottom: 17px;
 }
 
 .popular .popular-item:not(:nth-child(4n)), .catalog .catalog-item:not(:nth-child(3n)) {
-    margin-right: 17px;
+    margin-right: 20px;
 }
 
 .hidden-buy {
@@ -2005,6 +2006,9 @@ opacity: 1;
 .catalog-item, .popular-item {
     display: flex;
     flex-direction: column;
+    width:220px;
+    box-sizing: border-box;
+    overflow: hidden;
     min-height: 316px;
     margin-bottom: 20px;
 }
