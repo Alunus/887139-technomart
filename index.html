@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet" />
   <link href="css/normalize.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
@@ -18,8 +18,8 @@
           <input class="search-input" type="search" name="search" id="search" placeholder="Поиск" aria-label="Search" />
           <label for="search"></label>
         </form>
-        <a class="bookmark" href="">Закладки</a>
-        <a class="cart" href="">Корзина</a>
+        <a class="bookmark" href="">Закладки: 0</a>
+        <a class="cart" href="">Корзина: 0</a>
         <a class="btn" href="">Оформить заказ</a>
       </div>
     </div>
@@ -75,22 +75,30 @@
         </li>
       </ul>
       <div class="second-line">
-        <ul class="slider-container">
-          <li class="slider">
-            <h3 class="slider-head">Дрели</h3>
-            <p>Соседям на радость!</p>
-            <a class="btn" href="catalog.html">Открыть каталог</a>
-          </li>
-          <li class="slider check hidden">
-            <h3 class="slider-head">Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
-            <a class="btn" href="catalog.html">Открыть каталог</a>
-          </li>
-          <ul class="arrows">
-            <li><a class="slider-arrows" href="#"></a></li>
-            <li><a class="slider-arrows" href="#"></a></li>
+        <div class="slider" data-currentslide="0">
+          <ul class="slider-container">
+            <li class="slide slide-current">
+              <h3 class="slider-head">Дрели</h3>
+              <p>Соседям на радость!</p>
+              <img src="img/drills.jpg" alt="Слайд Дрели">
+              <a class="btn" href="catalog.html">Открыть каталог</a>
+            </li>
+            <li class="slide">
+              <h3 class="slider-head">Перфораторы</h3>
+              <img src="img/perforators.jpg" alt="Слайд Перфораторы">
+              <p>Настоящие мужские игрушки</p>
+              <a class="btn" href="catalog.html">Открыть каталог</a>
+            </li>
           </ul>
-        </ul>
+          <div class="arrows">
+            <button class="arrows-item" id="prevSlide" type="button" aria-label="Предыдущий слайд"></button>
+            <button class="arrows-item" id="nextSlide" type="button" aria-label="Следующий слайд"></button>
+          </div>
+          <div class="slider-buttons">
+            <button type="button" class="slider-button slider-button--active" aria-label="Cлайд 1"></button>
+            <button type="button" class="slider-button" aria-label="Cлайд 2"></button>
+          </div>
+        </div>
         <ul class="second-list">
           <li class="promo-item">
             <p>Скидки 50%</p>
@@ -111,7 +119,7 @@
       <ul>
         <li class="popular-item">
           <div class="hidden-buy">
-            <a class="btn">Купить</a> <a class="btn">В закладки</a>
+            <a class="btn add-to-cart">Купить</a> <a class="btn">В закладки</a>
           </div>
           <img src="img/bfg9000.jpg" height="176" width="220" alt="BFG9000" />
           <a class="name-price" href="">
@@ -122,7 +130,7 @@
         </li>
         <li class="popular-item">
           <div class="hidden-buy">
-            <a class="btn">Купить</a> <a class="btn">В закладки</a>
+            <a class="btn add-to-cart">Купить</a> <a class="btn">В закладки</a>
           </div>
           <img src="img/bfg3000.jpg" height="176" width="220" alt="BFG3000" />
           <a class="name-price" href="">
@@ -133,7 +141,7 @@
         </li>
         <li class="popular-item">
           <div class="hidden-buy">
-            <a class="btn">Купить</a> <a class="btn">В закладки</a>
+            <a class="btn add-to-cart">Купить</a> <a class="btn">В закладки</a>
           </div>
           <img src="img/bfg6000.jpg" height="176" width="220" alt="BFG6000" />
           <a class="name-price" href="">
@@ -144,7 +152,7 @@
         </li>
         <li class="popular-item new">
           <div class="hidden-buy">
-            <a class="btn">Купить</a> <a class="btn">В закладки</a>
+            <a class="btn add-to-cart">Купить</a> <a class="btn">В закладки</a>
           </div>
           <img src="img/bfg2000.jpg" height="176" width="220" alt="BFG2000" />
           <a class="name-price" href="">
@@ -197,9 +205,9 @@
           </p>
         </div>
         <ul class="service-list">
-          <li><button class="delivery btn bg" name="delivery">Доставка</button></li>
-          <li><button class="garanty btn" name="garanty">Гарантия</button></li>
-          <li><button class="credit btn" name="credit">Кредит</button></li>
+          <li><button class="delivery btn white" name="delivery">Доставка</button></li>
+          <li><button class="garanty btn hov" name="garanty">Гарантия</button></li>
+          <li><button class="credit btn hov" name="credit">Кредит</button></li>
         </ul>
         <ul class="description">
           <li class="delivery-des description-item">
@@ -244,7 +252,7 @@
           Техномарт работает со многими транспортными компаниями:
         </p>
         <ul>
-          <li>Деловые лини</li>
+          <li>Деловые линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
@@ -355,9 +363,8 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
     <h2 class="visually-hidden">Интерактивная карта</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1545639601685"
-      width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1547900308089"
+      width="940" height="446" style="border:0" allowfullscreen></iframe>
     <img src="img/popup-map.jpg" height="446" width="940" alt="Всплывающая карта" />
   </section>
   <script>
@@ -369,22 +376,47 @@
 
     var login = popup.querySelector("[name=user_name]");
 
+    var formPrventDefault = document.querySelector(".letter");
+
+    var UsernNameRequiredCheckPopUp = popup.querySelector("[name=user_name]");
+
+    var UserEmailRequiredCheckPopUp = popup.querySelector("[name=user_email]");
+
+    var LetterRequiredCheckPopUp = popup.querySelector("[name=letter]");
+
     link.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.add("letter-show");
       user_name.focus();
-    });
+    }
+    );
     close.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.remove("letter-show");
-    });
+      popup.classList.remove("modal-error");
+    }
+    );
     window.addEventListener("keydown", function (evt) {
       if (evt.keyCode === 27) {
         evt.preventDefault();
         if (popup.classList.contains("letter-show")) {
           popup.classList.remove("letter-show");
+          popup.classList.remove("modal-error");
         }
       }
+    });
+    popup.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+    });
+
+    popup.addEventListener("submit", function (evt) {
+      if (!UsernNameRequiredCheckPopUp.value || !UserEmailRequiredCheckPopUp.value || !LetterRequiredCheckPopUp.value) {
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+      }
+      evt.preventDefault();
     });
 
     var mapLink = document.querySelector(".map-link");
@@ -408,6 +440,7 @@
         evt.preventDefault();
         if (mapPopup.classList.contains("map-show")) {
           mapPopup.classList.remove("map-show");
+          popup.classList.remove("modal-error");
         }
       }
     });
@@ -426,6 +459,12 @@
 
     delivery.addEventListener("click", function (evt) {
       evt.preventDefault();
+      delivery.classList.add("white");
+      garanty.classList.remove("white");
+      credit.classList.remove("white");
+      delivery.classList.remove("hov");
+      garanty.classList.add("hov");
+      credit.classList.add("hov");
       delivery_des.classList.remove("hidden");
       garanty_des.classList.add("hidden");
       credit_des.classList.add("hidden");
@@ -433,6 +472,12 @@
 
     garanty.addEventListener("click", function (evt) {
       evt.preventDefault();
+      delivery.classList.remove("white");
+      garanty.classList.add("white");
+      credit.classList.remove("white");
+      delivery.classList.add("hov");
+      garanty.classList.remove("hov");
+      credit.classList.add("hov");
       delivery_des.classList.add("hidden");
       garanty_des.classList.remove("hidden");
       credit_des.classList.add("hidden");
@@ -440,6 +485,12 @@
 
     credit.addEventListener("click", function (evt) {
       evt.preventDefault();
+      delivery.classList.remove("white");
+      garanty.classList.remove("white");
+      credit.classList.add("white");
+      delivery.classList.add("hov");
+      garanty.classList.add("hov");
+      credit.classList.remove("hov");
       delivery_des.classList.add("hidden");
       garanty_des.classList.add("hidden");
       credit_des.classList.remove("hidden");
@@ -464,19 +515,57 @@
       user_logout.classList.add("hidden");
     });
 
-    var arrow = document.querySelectorAll(".slider-arrows");
+    var sliderButtons = Array.prototype.slice.call(document.querySelectorAll(".slider-button"));
+    var prevSlide = document.getElementById("prevSlide");
+    var nextSlide = document.getElementById("nextSlide");
+    var slider = document.querySelector(".slider");
 
-    var slider = document.querySelector(".check");
+    if (slider) {
+      var slides = slider.querySelectorAll(".slide");
+      var currentSlide;
+      sliderButtons.forEach(function (button, i) {
+        button.addEventListener("click", function () {
+          for (var y = 0; y < slides.length; y++) {
+            slides[y].classList.remove("slide-current");
+            sliderButtons[y].classList.remove("slider-button--active")
+          }
+          this.classList.add("slider-button--active");
+          slides[i].classList.add("slide-current");
+          slider.setAttribute("data-currentSlide", i);
+        })
+      })
+      prevSlide.addEventListener("click", function () {
+        currentSlide = slider.getAttribute("data-currentslide");
+        if (currentSlide > 0) {
+          for (var y = 0; y < slides.length; y++) {
+            slides[y].classList.remove("slide-current");
+            sliderButtons[y].classList.remove("slider-button--active")
+          }
+          console.log(currentSlide);
+          currentSlide--;
+          console.log(currentSlide);
+          sliderButtons[currentSlide].classList.add("slider-button--active");
+          slides[currentSlide].classList.add("slide-current");
+          slider.setAttribute("data-currentSlide", currentSlide);
+        }
+      })
+      nextSlide.addEventListener("click", function () {
+        currentSlide = slider.getAttribute("data-currentslide");
+        if (currentSlide < slides.length - 1) {
+          for (var y = 0; y < slides.length; y++) {
+            slides[y].classList.remove("slide-current");
+            sliderButtons[y].classList.remove("slider-button--active")
+          }
+          console.log(currentSlide);
+          currentSlide++;
+          console.log(currentSlide);
+          sliderButtons[currentSlide].classList.add("slider-button--active");
+          slides[currentSlide].classList.add("slide-current");
+          slider.setAttribute("data-currentSlide", currentSlide);
+        }
+      })
+    }
 
-arrow.addEventListener("click", function (evt) {
-  evt.preventDefault();
-if (slider.classList.contains("hidden")) {
-slider.classList.remove("hidden")}
- else { 
-  slider.classList.add("hidden");
-}
-}
-);
   </script>
 </body>
 

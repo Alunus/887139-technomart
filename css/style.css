@@ -1,7 +1,7 @@
 body {
     min-width: 940px;
     margin: 0;
-    padding: 0px 10px;
+    padding: 0;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 17px;
     line-height: 17px;
@@ -326,7 +326,7 @@ a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    min-height: 138px;
+    min-height: 140px;
 }
 
 .name-price {
@@ -404,14 +404,8 @@ a {
     border-radius: 0px;
 }
 
-.service button:hover {
+.service .hov:hover {
     background-color: #293449
-}
-
-.service button:active {
-    background-color: #ffffff;
-    color: #32425c;
-    border-color: #fff;
 }
 
 .description li:nth-child(1) {
@@ -615,7 +609,7 @@ a {
     width: 20px;
     height: 18px;
     top: 12px;
-    left: 17px;
+    left: 15px;
     background-image: url("../img/icon-user.svg");
     background-repeat: no-repeat;
     opacity: 0.3;
@@ -734,11 +728,6 @@ opacity: 1;
 .range-bg {
     background-color: #f7f3ec;
 }
-
-.filter-item span {
-    background-color: #f7f3ec;
-}
-
 .sorting {
     background-color: #f7f3ec;
 }
@@ -935,9 +924,9 @@ body {
 }
 .cart, .bookmark {
     position: relative;
-    width: 140px;
+    width: 109px;
     padding: 12px 0;
-    text-align: center
+    text-align: right
 }
 
 .bookmark::before {
@@ -954,7 +943,8 @@ body {
     opacity: 1;
 }
 .bookmark {
-    padding-right: 10px;
+    text-align: right;
+    width: 120px;
 }
 
 .cart {
@@ -967,7 +957,7 @@ body {
     width: 15px;
     height: 15px;
     top: 12px;
-    left: 15px;
+    left: 44px;
     background-image: url("../img/icon-cart.svg");
     opacity: 0.5;
 }
@@ -1036,7 +1026,7 @@ opacity: 1;
     margin-left: auto;
     margin-right: 10px;
     padding-left: 50px;
-    padding-right: 25px
+    padding-right: 20px;
 }
 
 .login::before {
@@ -1047,7 +1037,7 @@ opacity: 1;
     top: 14px;
     left: 14px;
     background-image: url("../img/icon-login.svg");
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 .reg {
@@ -1142,6 +1132,7 @@ nav .main-nav {
 .promo .first-line {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .promo .second-line {
@@ -1153,32 +1144,38 @@ nav .main-nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 20px;
     padding: 0px;
 }
 .slider-container {
     position: relative;
 }
-.slider {
-    display: flex;
-    top:0;
-    left:0;
+.slide {
+    display: none;
+    overflow: hidden;
     flex-direction: column;
     width: 620px;
     height: 266px;
     position: relative;
-    margin-top: 19px;
-    background-image: url(../img/drills.jpg);
-    background-size: 620px 266px;
-    background-repeat: no-repeat;
 }
-.slider:nth-child(2) {
+
+.slide img {
     position: absolute;
-    background-image: url(../img/perforators.jpg)
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
+
+.slide-current {
+    display: flex;
+}
+
 .slider h3 {
     margin: 24px 24px;
     margin-bottom: 1px;
+}
+
+.slider {
+  position: relative;
 }
 
 .slider p {
@@ -1195,7 +1192,7 @@ nav .main-nav {
     border-radius: 5px;
 }
 
-.slider-container .arrows {
+.slider .arrows {
     display: flex;
     position: absolute;
     justify-content: space-between;
@@ -1205,21 +1202,48 @@ nav .main-nav {
     top: 113px;
     padding: 0 24px;
 }
-.arrows a {
-    display: block;
-    width: 22px;
-    height: 40px;
+
+.arrows button {
+  width: 22px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
 }
-.arrows li:first-child {
-    width: 22px;
-    height: 40px;
+
+.arrows-item:hover,
+.slider-button:hover {
+  cursor: pointer;
+}
+
+.arrows-item:first-child{
     background-image: url("../img/icon-left.svg");
 }
 
-.arrows li:last-child {
-    width: 22px;
-    height: 40px;
+.arrows-item:last-child{
     background-image: url("../img/icon-right.svg");
+}
+
+.slider-buttons {
+  position: absolute;
+  bottom: 35px;
+  right: 300px;
+}
+
+.slider-button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.slider-button:not(:last-of-type) {
+  margin-right: 5px;;
+}
+
+.slider-button--active {
+  background-color: #ee3643;
 }
 
 .popular {
@@ -1304,6 +1328,7 @@ nav .main-nav {
     margin: 0;
     margin-top: 2px;
     font-size: 18px;
+    line-height: 20px;
 }
 
 .name-price p {
@@ -1386,6 +1411,7 @@ nav .main-nav {
 }
 
 .service-list button {
+    font-weight: bold;
     width: 240px;
     text-align: left;
     padding: 15px 0px;
@@ -1472,6 +1498,8 @@ nav .main-nav {
 }
 
 .company-info li {
+    position: relative;
+    padding-left: 35px;
     padding-bottom: 20px;
 }
 
@@ -1586,7 +1614,7 @@ nav .main-nav {
 .copyright {
     margin: 0;
     padding: 0;
-    margin-right: 35px;
+    margin-right: 40px;
 }
 
 .social {
@@ -1793,6 +1821,7 @@ nav .main-nav {
 }
 
 .catalog-filter h2 {
+    font-weight: 400;
     margin: 0;
     margin-bottom: 11px;
     padding: 11px 0px 11px 20px;
@@ -1815,8 +1844,9 @@ nav .main-nav {
 .catalog-filter .price-range {
     width: 220px;
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 21px;
     border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 16px;
 }
 
 .range-bg {
@@ -1831,8 +1861,7 @@ nav .main-nav {
 }
 
 .filter-item span {
-    width: 95px;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .filter-item span:nth-of-type(2) {
@@ -2018,7 +2047,7 @@ opacity: 1;
     min-width: 280px;
     justify-content: flex-start;
     list-style-type: none;
-    margin-top: 31px;
+    margin-top: 33px;
 }
 
 .page a {
@@ -2030,7 +2059,10 @@ opacity: 1;
     margin-right: 8px;
     ;
 }
-
+.page:first-child a {
+    background-color:#ee3643;
+    color:#fff;
+}
 .page:last-child a {
     width: 140px;
 }
@@ -2038,7 +2070,7 @@ opacity: 1;
 .about div {
     width: 940px;
     margin: auto;
-    padding: 55px 0;
+    padding: 55px 0 56px 0;
 }
 
 .about h2 {
@@ -2110,6 +2142,7 @@ opacity: 1;
 }
 .letter-show {
     display:block;
+    animation: bounce 0.6s;
 }
 .interactive-map iframe {
     position: absolute;
@@ -2121,7 +2154,9 @@ opacity: 1;
 }
 .map-show {
     display: flex;
+    animation: bounce 0.6s;
 }
+
 .interactive-map .close-btn {
     z-index: 3;
     margin-top: 40px;
@@ -2137,3 +2172,158 @@ opacity: 1;
 .log-reg {
     margin-left:auto;
 }
+.filter-item {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  .range-filter {
+    width: 220px;
+    margin:0;
+    margin-bottom: 6px;
+  }
+  
+  .range-controls {
+    position: relative;
+ 
+    height: 41px;
+    margin-bottom: 9px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    background-color: #f7f3ec;
+    
+  }
+  
+  .range-controls .scale {
+    height: 2px;
+  
+    background: #d7dcde;
+  }
+  
+  .range-controls .bar {
+    width: 70%;
+    height: 2px;
+  
+    background: #00ca74;
+  }
+  
+  .range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    
+    width: 4px;
+    height: 4px;
+    padding: 0;
+  
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .range-controls .toggle-min {
+    left: 20px;
+  }
+  
+  .range-controls .toggle-max {
+    left: 160px;
+  }
+  
+  .price-controls {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0;
+  }
+  
+  .price-controls label {
+    display: inline-block;
+    width: 95px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .price-controls input {
+    width: 95px;
+    padding: 10px 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    text-align: center;
+    color: #283136;
+    
+    border: none;
+    border-radius: 3px;
+    background: #f7f3ec
+  }
+  
+  .max-price {
+    text-align: right;
+  }
+  
+  .filter-item .max-price, .filter-item .min-price {
+      padding: 0px;
+  }
+
+.service .white {
+    color:#32425c;
+    background-color: #fff;
+    border-color: #fff;
+}
+.company-info li:before {
+    position: absolute;
+    top:9px;
+    left:0;
+    content: "";
+    width:25px;
+    height: 2px;
+    background-color:#ee3643;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+  }
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
