@@ -1044,8 +1044,16 @@ body {
     padding-left: 30px;
     padding-right: 12px;
 }
+.user-menu .catalog-cart {
+    position: relative;
+    width: 109px;
+    padding: 12px 0;
+    text-align: center;
+    padding-left: 33px;
+    padding-right: 9px;
+}
 
-.cart::before {
+.catalog-cart::before {
     content: "";
     position: absolute;
     width: 15px;
@@ -2230,7 +2238,7 @@ body {
     opacity: 0.5;
 }
 
-.checkbox:focus+label::before, .checkbox:hover+label::before {
+.checkbox:focus+label::before, .checkbox:not(:disabled):hover+label::before {
     opacity: 1;
 }
 
@@ -2269,7 +2277,7 @@ body {
     opacity: 0.5;
 }
 
-.radio:focus+label::before, .radio:hover+label::before {
+.radio:focus+label::before, .radio:not(:disabled):hover+label::before {
     opacity: 1;
 }
 
