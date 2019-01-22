@@ -125,7 +125,8 @@ a {
 }
 
 .user-menu .btn:active {
-    opacity: 0.5;
+background-color:#518534;
+color:#a8c29a;
 }
 
 .site-info {
@@ -333,6 +334,7 @@ a {
     color: #32425c;
     background-color: #ffffff;
     border: 3px solid #63a63e;
+    padding: 7px 0;
 }
 
 .hidden-buy .btn:first-child {
@@ -882,6 +884,7 @@ a {
     font-size: 13px;
     line-height: 24px;
     color: #000000;
+    letter-spacing: 0.001em;
 }
 
 .catalog-popup p {
@@ -1084,6 +1087,7 @@ body {
     margin: 0;
     margin-left: 52px;
     margin-right: 60px;
+    margin-top:2px;
 }
 
 .header-middle .contacts {
@@ -1147,12 +1151,12 @@ body {
     width: 150px;
 }
 
-.page-header nav {
-    width: 940px;
+.page-header .main-nav {
+    width: 890px;
     margin: auto;
 }
 
-nav .main-nav {
+.main-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1458,12 +1462,15 @@ nav .main-nav {
 }
 
 .hidden-buy a {
-    width: 135px;
+    width: 136px;
     padding: 8.5px 0;
-    margin: 10px 0;
     text-align: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+.hidden-buy a:first-child {
+    margin-top:8px;
+    margin-bottom: 11px;
 }
 
 .name-price {
@@ -2420,6 +2427,7 @@ nav .main-nav {
 }
 
 .about h2 {
+    letter-spacing: 0.007em;
     margin-top: 10px;
 }
 
